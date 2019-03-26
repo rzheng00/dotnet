@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="2" result="Failed" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="8" engine-version="3.9.0.0" clr-version="4.0.30319.42000" start-time="2019-03-21 16:59:38Z" end-time="2019-03-21 17:03:15Z" duration="217.849562">
+  <command-line><![CDATA["C:\Program Files (x86)\NUnit.org\nunit-console\nunit3-console.exe" POMExample.dll]]></command-line>
+  <test-suite type="Assembly" id="0-1004" name="POMExample.dll" fullname="POMExample.dll" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2019-03-21 16:59:39Z" end-time="2019-03-21 17:03:15Z" duration="216.261612" total="2" passed="0" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="8">
+    <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.16299.0" platform="Win32NT" cwd="C:\mycode\dotnet\SeleniumInCSharp\POMExample\POMExample\bin\Debug" machine-name="GCND8251LFTE" user="503068424" user-domain="LOGON" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\mycode\dotnet\SeleniumInCSharp\POMExample\POMExample\bin\Debug" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="33340" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1005" name="POMExample" fullname="POMExample" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2019-03-21 16:59:39Z" end-time="2019-03-21 17:03:15Z" duration="216.239809" total="2" passed="0" failed="2" warnings="0" inconclusive="0" skipped="0" asserts="8">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="0-1002" name="TestClass" fullname="POMExample.TestClass" classname="POMExample.TestClass" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2019-03-21 16:59:39Z" end-time="2019-03-21 17:01:38Z" duration="119.315745" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="4">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <output><![CDATA[BeforeClass method in base
+OneTimeSetUp method, BeforeDerivedClass, called in child class
+AfterClass method in Child is called
+AfterClass method in base is called
+]]></output>
+        <test-case id="0-1003" name="SearchTextFormAboutPage" fullname="POMExample.TestClass.SearchTextFormAboutPage" methodname="SearchTextFormAboutPage" classname="POMExample.TestClass" runstate="Runnable" seed="1402730848" result="Failed" label="Error" start-time="2019-03-21 16:59:39Z" end-time="2019-03-21 17:01:34Z" duration="114.825404" asserts="4">
+          <properties>
+            <property name="Order" value="1" />
+          </properties>
+          <failure>
+            <message><![CDATA[OpenQA.Selenium.NoSuchWindowException : Unable to get browser
+TearDown : OpenQA.Selenium.NoSuchWindowException : Unable to get browser]]></message>
+            <stack-trace><![CDATA[   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.GetAttribute(String attributeName)
+   at POMExample.PageObjects.ResultPage.HasMoreItems() in C:\mycode\dotnet\SeleniumInCSharp\POMExample\POMExample\PageObjects\ResultPage.cs:line 33
+   at POMExample.TestClass.SearchTextFormAboutPage() in C:\mycode\dotnet\SeleniumInCSharp\POMExample\POMExample\TestCases\TestClass.cs:line 107
+--TearDown
+   at POMExample.Utilities.BaseTestCase.TearDown() in C:\mycode\dotnet\SeleniumInCSharp\POMExample\POMExample\Utilities\BaseTestCase.cs:line 99]]></stack-trace>
+          </failure>
+          <output><![CDATA[SetUp method in base is called
+call constructure in parent
+call constructure in child
+call constructure in parent
+call constructure in parent
+counts: 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+need scroll down 10
+TearDown method in Child is called
+TearDown method in base is called
+]]></output>
+        </test-case>
+      </test-suite>
+      <test-suite type="TestFixture" id="0-1000" name="TestClass2" fullname="POMExample.TestClass2" classname="POMExample.TestClass2" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2019-03-21 17:01:38Z" end-time="2019-03-21 17:03:15Z" duration="96.914541" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="4">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <output><![CDATA[BeforeClass method in base
+Report object is init already
+OneTimeSetUp method, BeforeDerivedClass, called in child class
+AfterClass method in Child is called
+AfterClass method in base is called
+]]></output>
+        <test-case id="0-1001" name="SearchTextFormAboutPage2" fullname="POMExample.TestClass2.SearchTextFormAboutPage2" methodname="SearchTextFormAboutPage2" classname="POMExample.TestClass2" runstate="Runnable" seed="626572698" result="Failed" start-time="2019-03-21 17:01:38Z" end-time="2019-03-21 17:03:15Z" duration="96.434236" asserts="4">
+          <properties>
+            <property name="Order" value="1" />
+          </properties>
+          <failure>
+            <message><![CDATA[  Expected: greater than 100
+  But was:  10
+]]></message>
+            <stack-trace><![CDATA[   at POMExample.TestClass2.SearchTextFormAboutPage2() in C:\mycode\dotnet\SeleniumInCSharp\POMExample\POMExample\TestCases\TestClass2.cs:line 104
+]]></stack-trace>
+          </failure>
+          <output><![CDATA[SetUp method in base is called
+call constructure in parent
+call constructure in child
+call constructure in parent
+call constructure in parent
+TearDown method in Child is called
+TearDown method in base is called
+]]></output>
+          <assertions>
+            <assertion result="Failed">
+              <message><![CDATA[  Expected: greater than 100
+  But was:  10
+]]></message>
+              <stack-trace><![CDATA[   at POMExample.TestClass2.SearchTextFormAboutPage2() in C:\mycode\dotnet\SeleniumInCSharp\POMExample\POMExample\TestCases\TestClass2.cs:line 104
+]]></stack-trace>
+            </assertion>
+          </assertions>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
