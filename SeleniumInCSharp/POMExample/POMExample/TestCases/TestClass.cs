@@ -58,21 +58,7 @@ namespace POMExample
 
             driver.Manage().Window.Maximize();
             driver.Url = "https://www.swtestacademy.com/";
-
-            if (driver.Title.Contains("GE"))
-            {
-                IWebElement username = driver.FindElement(By.Id("username"));
-                username.Clear();
-                username.SendKeys("503068424");
-
-                IWebElement password = driver.FindElement(By.Name("password"));
-                password.Clear();
-                password.SendKeys("Jingfx1979sd");
-
-                IWebElement btn_Login = driver.FindElement(By.CssSelector(".login"));
-                btn_Login.Click();
-                Thread.Sleep(2000);
-            }
+           
             driver.Navigate().Refresh();
             Thread.Sleep(1000);
             StringAssert.AreEqualIgnoringCase(driver.Title, "Software Test Academy");
@@ -88,8 +74,8 @@ namespace POMExample
             //}
         }
 
-        [Test, Order(1)]
-        public void SearchTextFormAboutPage()
+        [Test, TestCaseSource("QueryData"),Order(1)]
+        public void SearchTextFormAboutPage(string keyword, string matchedArticles)
         {
             HomePage home = new HomePage(driver);
             home.GetAboutLink().Click();
@@ -97,11 +83,11 @@ namespace POMExample
             AboutPage about = new AboutPage(driver);
             about.GetSearchIcon().Click();
             Assert.IsNotNull(about.GetSearchbox());
-            about.Search("testng");
+            about.Search(keyword);
 
             ResultPage result = new ResultPage(driver);
             int count = result.GetArticles().Count;
-            Assert.Greater(count, 0);
+            Assert.AreEqual(count, Convert.ToInt32(matchedArticles));
             Console.WriteLine("counts: " + count);
 
             //while (result.HasMoreItems())
@@ -109,7 +95,7 @@ namespace POMExample
             //    Utilities.Utility.ExecuteJs(driver, "window.scrollTo(0, document.body.scrollHeight)");
             //    Console.WriteLine("need scroll down " + result.GetArticles().Count);
             //    Thread.Sleep(100);
-            //}          
+            //}
 
 
         }
@@ -172,6 +158,11 @@ namespace POMExample
             //    throw (e);
             //}
             //driver.Quit();
+        }
+
+        public static IEnumerable<TestCaseData> QueryData()
+        {
+            return Util.TestDataReader.ReadFromCSV("test2.csv");
         }
     }
 }

@@ -46,5 +46,36 @@ namespace POMExample.Util
                 foreach (TestCaseData testCaseData in testCases)
                     yield return testCaseData;
         }
+
+        public static IEnumerable<TestCaseData> ReadFromCSV(string csvFileName)
+        {
+            string executableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string csvLocation = Path.Combine(executableLocation, "data\\" + csvFileName);
+
+            if (!File.Exists(csvLocation))
+                throw new Exception(string.Format("File name: {0}", csvLocation), new FileNotFoundException());
+
+            var testCases = new List<TestCaseData>();
+            using (var fs = File.OpenRead(@csvLocation))
+            using (var sr = new StreamReader(fs))
+            {
+                string line = string.Empty;
+                while (line != null)
+                {
+                    line = sr.ReadLine();
+                    if (line != null)
+                    {
+                        string[] split = line.Split(new char[] { ',' },
+                            StringSplitOptions.None);
+
+                        testCases.Add(new TestCaseData(split));
+                    }
+                }
+            }
+
+            if (testCases != null)
+                foreach (TestCaseData testCaseData in testCases)
+                    yield return testCaseData;
+        }
     }
 }
